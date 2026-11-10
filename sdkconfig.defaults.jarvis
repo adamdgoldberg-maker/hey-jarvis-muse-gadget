@@ -1,0 +1,16 @@
+# sdkconfig values used by the reference build (wake-v8).
+# Append to the project's sdkconfig defaults (or set via menuconfig)
+# before building. Toolchain: ESP-IDF v6.0.3, SDK @ 463bd2a.
+
+# Live realtime voice calls (tap/wake starts a real voice conversation)
+CONFIG_MUSE_REALTIME_VOICE=y
+CONFIG_MUSE_REALTIME_VOICE_IDLE_S=45
+CONFIG_MUSE_REALTIME_VOICE_MAX_S=900
+
+# Encrypted NVS (the gadget token lives there)
+CONFIG_HOMEHUB_NVS_ENCRYPTION=y
+CONFIG_NVS_ENCRYPTION=y
+CONFIG_NVS_SEC_HMAC_EFUSE_KEY_ID=5
+
+# Deliberately OFF for this build: Secure Boot, flash encryption,
+# pairing attestation.
